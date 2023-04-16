@@ -1,0 +1,281 @@
+main .home-container{
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+main .home-container::-webkit-scrollbar{
+  width: 2px;
+}
+main .home-container::-webkit-scrollbar-track{
+  background-color: var(--maincolor);
+  border-radius: 10px;
+}
+main .home-container::-webkit-scrollbar-thumb{
+  background-color: var(--lightroyal);
+  border-radius: 10px;
+
+  
+}
+/* nav */
+nav{
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid var(--lightroyal);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 150;
+  background-color: var(--maincolor);
+}
+nav > a{
+  text-decoration: none;
+  display: flex;
+}
+nav > a img{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+} 
+
+nav > a span{
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  padding-left: 5px;
+}
+nav > i {
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid var(--lightroyal);
+  cursor: pointer;
+  visibility: hidden;
+}
+main .home-container nav > ul{
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+main .home-container nav ul li a {
+  display: block;
+  color: white;
+  padding: 10px 15px; 
+  transition: 0.5s;
+}
+main .home-container nav ul li a:hover{
+  background-color: var(--lightroyal);
+}
+
+main .home-container nav ul li a span{
+  padding-left: 7px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+main .home-container nav ul li {
+  position: relative;
+}
+
+main .home-container nav  ul li ul {
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 5px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid var(--lightroyal);
+  background-color: var(--maincolor);
+  z-index: 998;
+  display: none; 
+}
+@media (max-width:780px){
+  main nav {
+    justify-content: space-between;
+    padding: 5px;
+  }
+  main nav > i {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  main nav > i:hover {
+    color: var(--lightroyal);
+  }
+ 
+ main .home-container nav > ul{
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-start;
+  top: 60px;
+  z-index: 999;
+  background-color: var(--maincolor);
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid var(--lightroyal);
+  display: none;
+ }
+ main .home-container nav > ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 198px;
+  border-radius: 5px;
+ }
+ main .home-container nav  ul li ul{
+  margin-left: 0;
+  top: 36px;
+  width: 200px;
+ }
+ /* main .home-container > P{
+  margin: auto;
+ } */
+}
+
+.active{
+  background-color: var(--lightroyal);
+}
+/* card */
+main .home-container .card {
+  position: relative;
+  max-width: 280px;
+  height: 160px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  top: 60px;
+  box-shadow: -2px 2px 5px 0 black;
+}
+
+main .home-container .card img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+main .home-container .card header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+main .home-container .card p:nth-child(3) {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  color: white;
+  font-size: 12px;
+}
+
+main .home-container .card p:nth-child(4) {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+main .home-container .card p:nth-child(5) {
+  position: absolute;
+  top: 95px;
+  right: 65px;
+  color: white;
+  font-size: 10px;
+}
+main .home-container .card i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: rotate(90deg) translateX(-50%);
+  color: goldenrod;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 30px;
+}
+main .home-container .card span {
+  position: absolute;
+  bottom: 5px;
+  width: 95%;
+  left: 2.5%;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+/* welcome text about kingsman store */
+
+main .home-container > p{
+  color: white;
+  max-width: 280px;
+  position: relative;
+  top: 110px;
+  padding: 10px 15px;
+  background-color: var(--lightroyal);
+  letter-spacing: 0.5px;
+  border-radius: 0 8px 8px 0 ;
+  margin: auto;
+}
+
+
+footer{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column ;
+  margin-top: 170px;
+  padding: 20px 25px;
+}
+footer .icons-Accounts{
+  color: white;
+  font-size: 18px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+footer .icons-Accounts a i {
+  font-size: 20px;
+  color: var(--lightroyal);
+  transition: 0.5s;
+}
+footer .icons-Accounts a i:hover{
+  color: white;
+}
+
+footer .text{
+  color: slategray;
+    text-align: center;
+}
+footer .text :nth-child(1){
+  font-size: 18px;
+  margin-bottom: 10px;
+
+}
+footer .text :nth-child(2){
+  font-size: 14px;
+}
+
+footer .text :nth-child(3){
+  color: var(--lightroyal);
+  font-size: 11px;
+}
+

@@ -1,0 +1,57 @@
+section {
+  padding: 60px 10px 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+section .product {
+  width: 250px;
+  height: 350px;
+  border: 1px solid var(--lightroyal);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: 0.5s;
+}
+section .product:hover {
+  border-color: white;
+  margin-top: 5px;
+}
+
+section .product img {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+section .product form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .product form div {
+  margin: 10px 0;
+  padding: 5px;
+}
+section .product form input {
+  width: 70px;
+  padding: 5px 10px;
+  margin: 25px 5px 5px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid var(--lightroyal);
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+section .product form input:hover {
+  background-color: var(--lightroyal);
+  border-color: white;
+}
